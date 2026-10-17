@@ -2,21 +2,18 @@
 
 AquaRestore enhances underwater photographs affected by haze, color distortion, and low contrast using Python and OpenCV.
 
-✨ Features
+## ✨ Features
 Color correction
 CLAHE contrast enhancement
 Image sharpening
 Original vs. restored image comparison
 Image upload and download through Streamlit
-🖼️ Sample Output
 
-!Restored Underwater Image
-
-🛠️ Technologies
+## 🛠️ Technologies
 
 Python · OpenCV · NumPy · Pillow · Matplotlib · Streamlit · Jupyter Notebook
 
-📁 Project Files
+## 📁 Project Files
 
 app.py – Streamlit web application
 Img_Restoration.ipynb – Jupyter Notebook implementation
@@ -25,7 +22,7 @@ requirements.txt – Required Python libraries
 sample_images/ – Sample input images
 restored_underwater.png – Enhanced image output
 
-🚀 How to Run
+## 🚀 How to Run
 Install dependencies:
 pip install -r requirements.txt
 Start the application:
