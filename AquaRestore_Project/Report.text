@@ -1,0 +1,140 @@
+AQUARestore: UNDERWATER IMAGE RESTORATION
+Assignment 2 – Project Documentation
+
+Project Title: Underwater Image Restoration
+Technology: Python, OpenCV, NumPy, Pillow, Streamlit and Jupyter Notebook
+IDE: Visual Studio Code (VS Code)
+Group Members: MOHOD ARTHALI A. * 24001008
+               TURKAR MINAKSHI Y. * 24001012
+               AKARE TANISHA R. * 24001034
+               KOLHE SNEHA K. * 24001024
+Class/Department:%th sen AI
+Academic Year:2026-27
+
+
+1. ABSTRACT
+
+Underwater photographs often suffer from haze, reduced visibility, color distortion and low contrast due to light absorption and scattering in water. These issues can reduce the visual quality of underwater images.
+
+The Underwater Image Restoration project aims to improve the visual appearance of underwater photographs using image processing techniques. The system uses Python and OpenCV to perform color correction, contrast enhancement and image sharpening.
+
+A Streamlit-based web application provides a user-friendly interface where users can upload an underwater image, adjust enhancement parameters, compare the original and enhanced images, and download the processed result.
+
+The project also includes a Jupyter Notebook that demonstrates the implementation and results of the image enhancement algorithm.
+
+2. INTRODUCTION
+
+Underwater imaging is widely used in marine research, ocean exploration, underwater photography, aquatic life monitoring and environmental observation. However, underwater photographs frequently exhibit blue-green color casts, haze and reduced contrast.
+
+These problems occur because water absorbs different wavelengths of light at different rates and suspended particles scatter light.
+
+This project implements a traditional computer vision approach to improve the appearance of underwater photographs. It also provides a web interface that makes the enhancement process accessible without requiring users to understand the underlying image processing code.
+
+3. PROBLEM STATEMENT
+
+Underwater photographs often have poor visibility, color distortion and reduced contrast. Manually correcting these problems can be difficult for users without image editing experience.
+
+The project addresses this problem by developing an application that automatically enhances underwater images using image processing techniques and provides an interface for uploading, viewing, adjusting and downloading the results.
+
+4. OBJECTIVES
+
+The main objectives of this project are:
+
+To improve the visual appearance of underwater photographs.
+To reduce some blue-green color distortion through color correction.
+To enhance local image contrast using Contrast Limited Adaptive Histogram Equalization (CLAHE).
+To improve the appearance of edges and details through image sharpening.
+To display the original and enhanced images side by side.
+To allow users to adjust enhancement parameters.
+To provide a downloadable enhanced image.
+To develop a user-friendly web application using Streamlit.
+To demonstrate the algorithm through a Jupyter Notebook.
+To deploy the web application publicly so that users can access it through a web link.
+5. TECHNOLOGIES USED
+
+Python: The main programming language used to implement the image processing algorithm and web application.
+
+OpenCV: Used for image processing, color space conversion, contrast enhancement and sharpening operations.
+
+NumPy: Used for numerical calculations and image array manipulation.
+
+Pillow (PIL): Used to open, convert, orient and save images.
+
+Matplotlib: Used in the Jupyter Notebook to display and compare images.
+
+Jupyter Notebook: Used to document the algorithm, execute individual code cells and display experimental results.
+
+Streamlit: Used to develop the interactive web application.
+
+Visual Studio Code: Used as the development environment.
+
+GitHub: Used to store and manage the project source code.
+
+Streamlit Community Cloud: Used to deploy the web application and provide a public access link.
+
+6. PROJECT FILE STRUCTURE
+
+The project contains the following main files:
+
+app.py: Contains the Streamlit web application, image restoration function, image upload component, enhancement controls, comparison display and download functionality.
+Img_Restoration.ipynb: Contains the Jupyter Notebook implementation, library imports, image restoration algorithm, original and enhanced image comparison, and code to save the result.
+requirements.txt: Contains the Python libraries required to install and run the project.
+Project_Report.docx: Contains the project documentation, methodology, code explanation, execution instructions, results and deployment information.
+sample_images/underwater.jpg: Contains the sample underwater photograph used for testing the notebook, if this folder is included in the project.
+7. METHODOLOGY
+
+The project follows a sequence of image processing operations.
+
+7.1 Image Input
+
+The user uploads an underwater photograph in JPG, JPEG or PNG format. The application reads the image and converts it to RGB format for consistent processing and display.
+
+7.2 Color Correction
+
+The project uses a gray-world white-balance approach. This technique calculates the average intensity of the red, green and blue channels and adjusts their relative contributions.
+
+The aim is to reduce some color casts commonly observed in underwater photographs.
+
+The correction strength can be adjusted through the application's sidebar.
+
+7.3 Contrast Enhancement Using CLAHE
+
+Contrast Limited Adaptive Histogram Equalization (CLAHE) improves local contrast in different regions of an image.
+
+The image is converted from RGB to the LAB color space. CLAHE is applied to the lightness channel, while the other two channels are retained.
+
+The processed image is then converted back to RGB.
+
+This method can make some underwater details more visible, depending on the quality of the original photograph.
+
+7.4 Image Sharpening
+
+The application uses unsharp masking to enhance edges and details.
+
+A blurred version of the image is created using Gaussian blur. The blurred image is then combined with the original enhanced image to emphasize differences around edges.
+
+The sharpening strength is adjustable. Excessive sharpening may introduce artifacts or amplify noise.
+
+7.5 Image Comparison
+
+The application displays the original image and the enhanced image side by side. This allows users to visually examine the effects of the processing operations.
+
+The Jupyter Notebook provides a similar comparison using Matplotlib.
+
+7.6 Downloading the Result
+
+The enhanced image is converted into PNG format and made available through a download button.
+
+The output retains the image resolution, provided the image is within the application's configured size limit.
+
+8. WORKING OF THE WEB APPLICATION
+
+The Streamlit application follows these steps:
+
+The user opens the application in a web browser.
+The user uploads an underwater photograph.
+The application reads and validates the image.
+The user adjusts color correction, local contrast and sharpening settings.
+The restoration algorithm processes the image.
+The application displays the original and enhanced photographs.
+Image dimensions, megapixel count and processing time
