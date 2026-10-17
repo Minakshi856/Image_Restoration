@@ -1,8 +1,8 @@
-🌊 AquaRestore – Underwater Image Restoration
+#🌊 AquaRestore – Underwater Image Restoration
 
 AquaRestore enhances underwater photographs affected by haze, color distortion, and low contrast using Python and OpenCV.
 
-✨ Features
+##✨ Features
 Color correction
 CLAHE contrast enhancement
 Image sharpening
